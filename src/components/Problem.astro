@@ -1,0 +1,118 @@
+---
+---
+
+<section class="problem" aria-labelledby="problem-heading">
+  <div class="container">
+    <div class="problem-inner">
+
+      <div class="problem-statement fade-up">
+        <span class="label">The Problem</span>
+        <h2 id="problem-heading">Most diets fail because they lack structure.</h2>
+      </div>
+
+      <div class="problem-body fade-up fade-up-delay-1">
+        <p>
+          Eating "healthy" isn't enough. Switching diets doesn't work. The real problem?
+          Your nutrition never matches your goal. CutPhase gives you a clear system—so
+          every meal moves you forward.
+        </p>
+
+        <ul class="problem-list" aria-label="Common diet problems">
+          <li>
+            <span class="problem-indicator" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </span>
+            No clear goal behind what you eat
+          </li>
+          <li>
+            <span class="problem-indicator" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </span>
+            Generic plans that don't adapt to your phase
+          </li>
+          <li>
+            <span class="problem-indicator" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </span>
+            Progress that stalls with no direction
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    padding-block: var(--section-pad);
+    background-color: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .problem-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .problem-statement h2 {
+    max-width: 400px;
+    margin-top: 4px;
+  }
+
+  .problem-body p {
+    font-size: 1.0625rem;
+    margin-bottom: 32px;
+    max-width: 400px;
+    line-height: 1.75;
+  }
+
+  .problem-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .problem-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted-dim);
+    font-size: 0.9375rem;
+  }
+
+  .problem-indicator {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--muted-dim);
+  }
+
+  @media (max-width: 768px) {
+    .problem-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .problem-statement h2,
+    .problem-body p {
+      max-width: 100%;
+    }
+  }
+</style>

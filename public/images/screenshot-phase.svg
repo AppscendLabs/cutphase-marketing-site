@@ -1,0 +1,40 @@
+<svg width="240" height="480" viewBox="0 0 240 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="480" rx="28" fill="#0f0f0f"/>
+
+  <!-- Header -->
+  <text x="24" y="52" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6b7280" letter-spacing="0.5">CHOOSE YOUR PHASE</text>
+  <text x="24" y="74" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="16" fill="#ffffff">What's your goal?</text>
+  <text x="24" y="92" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6b7280">Select a phase to start</text>
+
+  <!-- Cut Card (active) -->
+  <rect x="16" y="112" width="208" height="80" rx="14" fill="rgba(212,64,53,0.08)" stroke="#D44035" stroke-width="1.5"/>
+  <rect x="28" y="128" width="36" height="36" rx="10" fill="rgba(212,64,53,0.15)"/>
+  <text x="46" y="151" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#D44035">↓</text>
+  <text x="74" y="140" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#ffffff" font-weight="600">Cutting</text>
+  <text x="74" y="156" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">Caloric deficit · Preserve muscle</text>
+  <circle cx="206" cy="152" r="8" fill="rgba(212,64,53,0.2)" stroke="#D44035" stroke-width="1.5"/>
+  <circle cx="206" cy="152" r="4" fill="#D44035"/>
+
+  <!-- Bulk Card -->
+  <rect x="16" y="204" width="208" height="80" rx="14" fill="#161616" stroke="#1f1f1f" stroke-width="1"/>
+  <rect x="28" y="220" width="36" height="36" rx="10" fill="#1e1e1e"/>
+  <text x="46" y="243" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#6b7280">↑</text>
+  <text x="74" y="232" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#ffffff" font-weight="600">Bulking</text>
+  <text x="74" y="248" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">Caloric surplus · Build muscle</text>
+  <circle cx="206" cy="244" r="8" fill="#1e1e1e" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Maintain Card -->
+  <rect x="16" y="296" width="208" height="80" rx="14" fill="#161616" stroke="#1f1f1f" stroke-width="1"/>
+  <rect x="28" y="312" width="36" height="36" rx="10" fill="#1e1e1e"/>
+  <text x="46" y="335" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#6b7280">→</text>
+  <text x="74" y="324" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#ffffff" font-weight="600">Maintaining</text>
+  <text x="74" y="340" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6b7280">TDEE balance · Sustain results</text>
+  <circle cx="206" cy="336" r="8" fill="#1e1e1e" stroke="#333" stroke-width="1.5"/>
+
+  <!-- CTA Button -->
+  <rect x="16" y="400" width="208" height="44" rx="12" fill="#D44035"/>
+  <text x="120" y="427" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#ffffff" font-weight="700">Start Cutting Phase</text>
+
+  <!-- Home indicator -->
+  <rect x="80" y="460" width="80" height="3" rx="1.5" fill="#2a2a2a"/>
+</svg>

@@ -1,0 +1,182 @@
+/* ============================================
+   CutPhase — Global Design System
+   ============================================ */
+
+/* ─── Reset ──────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Tokens ─────────────────────────────── */
+:root {
+  --bg:           #0a0a0a;
+  --bg-alt:       #0d0d0d;
+  --card:         rgba(255, 255, 255, 0.04);
+  --card-hover:   rgba(255, 255, 255, 0.06);
+
+  /* Brand red — matched to logo arc */
+  --accent:       #D44035;
+  --accent-rgb:   212, 64, 53;
+  --accent-dim:   rgba(212, 64, 53, 0.08);
+  --accent-glow:  rgba(212, 64, 53, 0.2);
+
+  --text:         #ffffff;
+  --muted:        #9ca3af;
+  --muted-dim:    #6b7280;
+  --border:       rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.1);
+
+  --radius:    12px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --max-width:   1100px;
+  --text-width:  680px;
+  --section-pad: 120px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Base ───────────────────────────────── */
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Container ──────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* ─── Typography ─────────────────────────── */
+h1, h2, h3, h4 {
+  color: var(--text);
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── Buttons ────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.15s ease, border-color 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+  background-color: var(--card);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.875rem;
+}
+
+/* ─── Section Label ──────────────────────── */
+.label {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+/* ─── Scroll Animations ──────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-1 { transition-delay: 0.08s; }
+.fade-up-delay-2 { transition-delay: 0.16s; }
+.fade-up-delay-3 { transition-delay: 0.24s; }
+
+/* ─── Responsive ─────────────────────────── */
+@media (max-width: 900px) {
+  :root { --section-pad: 88px; }
+}
+
+@media (max-width: 480px) {
+  :root { --section-pad: 64px; }
+}

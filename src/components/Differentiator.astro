@@ -1,0 +1,167 @@
+---
+const comparisons = [
+  { them: 'Count every calorie manually', us: 'Phase-aligned targets, auto-set' },
+  { them: 'Same macros regardless of goal', us: 'Macros that shift with your phase' },
+  { them: 'Restart when the diet stops working', us: 'Transition phases built in' },
+  { them: 'Generic meal suggestions', us: 'Meals matched to your current phase' },
+];
+---
+
+<section class="differentiator" aria-labelledby="diff-heading">
+  <div class="container">
+
+    <div class="diff-inner">
+
+      <div class="diff-header fade-up">
+        <span class="label">Why CutPhase</span>
+        <h2 id="diff-heading">Not another calorie tracker.</h2>
+        <p class="diff-tagline">Phases. Structure. Consistency.</p>
+        <p class="diff-body">
+          CutPhase isn't built around calorie math. It's built around phases.
+          Your nutrition goal changes when your body goal changes—automatically,
+          without starting over.
+        </p>
+      </div>
+
+      <div class="diff-table fade-up fade-up-delay-1" role="table" aria-label="CutPhase vs. other apps comparison">
+        <div class="diff-table-header" role="row">
+          <span role="columnheader">Other apps</span>
+          <span role="columnheader">CutPhase</span>
+        </div>
+        {comparisons.map((row) => (
+          <div class="diff-row" role="row">
+            <div class="diff-cell diff-cell--them" role="cell">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+              {row.them}
+            </div>
+            <div class="diff-cell diff-cell--us" role="cell">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              {row.us}
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .differentiator {
+    padding-block: var(--section-pad);
+    background-color: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .diff-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .diff-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diff-tagline {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 14px;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .diff-body {
+    font-size: 1rem;
+    max-width: 360px;
+    line-height: 1.75;
+  }
+
+  .diff-table {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .diff-table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 11px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .diff-table-header span {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-dim);
+  }
+
+  .diff-table-header span:last-child {
+    color: var(--accent);
+  }
+
+  .diff-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border);
+  }
+
+  .diff-row:first-of-type {
+    border-top: none;
+  }
+
+  .diff-cell {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 16px;
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  .diff-cell svg {
+    flex-shrink: 0;
+  }
+
+  .diff-cell--them {
+    color: var(--muted-dim);
+    border-right: 1px solid var(--border);
+  }
+
+  .diff-cell--them svg {
+    color: rgba(255, 255, 255, 0.18);
+  }
+
+  .diff-cell--us {
+    background: rgba(var(--accent-rgb), 0.03);
+    color: var(--text);
+  }
+
+  .diff-cell--us svg {
+    color: var(--accent);
+  }
+
+  @media (max-width: 900px) {
+    .diff-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .diff-body {
+      max-width: 100%;
+    }
+  }
+</style>

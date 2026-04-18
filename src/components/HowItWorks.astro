@@ -1,0 +1,122 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Choose Your Phase',
+    description:
+      'Start by selecting your current goal—cutting, bulking, or maintaining. Your entire plan is built from there.',
+  },
+  {
+    number: '02',
+    title: 'Follow Your Plan',
+    description:
+      'Get daily calorie and macro targets, meal guidance, and structure—built around your specific phase.',
+  },
+  {
+    number: '03',
+    title: 'Track Progress',
+    description:
+      'Log food, monitor your numbers, and watch your body change with a plan that actually makes sense.',
+  },
+];
+---
+
+<section class="how-it-works" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="container">
+
+    <div class="section-header fade-up">
+      <span class="label">How It Works</span>
+      <h2 id="hiw-heading">Three steps. One system.</h2>
+    </div>
+
+    <ol class="steps" aria-label="How CutPhase works">
+      {steps.map((step, i) => (
+        <li class={`step fade-up fade-up-delay-${i + 1}`}>
+          <span class="step-number" aria-hidden="true">{step.number}</span>
+          <div class="step-content">
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    padding-block: var(--section-pad);
+    border-top: 1px solid var(--border);
+  }
+
+  .section-header {
+    margin-bottom: 56px;
+  }
+
+  .section-header h2 {
+    max-width: 360px;
+    margin-top: 6px;
+  }
+
+  .steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .step {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .step:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+  }
+
+  .step-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: rgba(255, 255, 255, 0.07);
+    margin-bottom: 40px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .step-content p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .steps {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .step {
+      padding: 28px 24px;
+    }
+
+    .step-number {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+  }
+</style>

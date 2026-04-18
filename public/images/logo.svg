@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="none">
+  <!--
+    CutPhase full logo — icon + wordmark, transparent background, for dark use.
+    Replace with official file when available.
+  -->
+
+  <!-- ── Red phase arc ── -->
+  <path d="M 38 96 A 62 62 0 0 1 162 96"
+        stroke="#D44035" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- ── Left blades ── -->
+  <rect x="-6" y="-32" width="13" height="62" rx="6"
+        fill="#EDE4CA" transform="translate(60, 84) rotate(-42)"/>
+  <rect x="-6" y="-30" width="13" height="58" rx="6"
+        fill="#EDE4CA" transform="translate(57, 116) rotate(42)"/>
+
+  <!-- ── Center: Flexed bicep arm ── -->
+  <ellipse cx="100" cy="88" rx="32" ry="24"
+           fill="#EDE4CA" transform="rotate(-12 100 88)"/>
+  <rect x="-10" y="-26" width="20" height="52" rx="10"
+        fill="#EDE4CA" transform="translate(118, 114) rotate(-24)"/>
+  <rect x="-10" y="-28" width="20" height="56" rx="10"
+        fill="#EDE4CA" transform="translate(76, 134) rotate(10)"/>
+  <rect x="56" y="155" width="34" height="26" rx="9" fill="#EDE4CA"/>
+
+  <!-- ── Right vertical blade ── -->
+  <rect x="142" y="50" width="14" height="96" rx="7" fill="#EDE4CA"/>
+  <rect x="136" y="116" width="26" height="8" rx="4" fill="#EDE4CA"/>
+
+  <!-- ── Bottom handles ── -->
+  <rect x="-5" y="-18" width="11" height="36" rx="5"
+        fill="#EDE4CA" transform="translate(79, 172) rotate(-20)"/>
+  <rect x="-5" y="-18" width="11" height="36" rx="5"
+        fill="#EDE4CA" transform="translate(102, 172) rotate(20)"/>
+
+  <!-- ── Wordmark ── -->
+  <text x="100" y="242"
+        text-anchor="middle"
+        font-family="Inter, system-ui, -apple-system, sans-serif"
+        font-size="26" font-weight="800" letter-spacing="-0.6"
+        fill="#EDE4CA">CutPhase</text>
+</svg>

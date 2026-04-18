@@ -1,0 +1,140 @@
+---
+const screens = [
+  {
+    src: '/images/mockup-01.png',
+    alt: 'CutPhase app on iPhone showing phase-aligned daily plan',
+    caption: 'Your daily plan',
+    label: '01',
+  },
+  {
+    src: '/images/mockup-03.png',
+    alt: 'CutPhase app on iPhone showing habit tracking',
+    caption: 'Track your progress',
+    label: '02',
+  },
+  {
+    src: '/images/mockup-02.png',
+    alt: 'CutPhase app on iPhone showing progress tracking',
+    caption: 'Build habits',
+    label: '03',
+  },
+];
+---
+
+<section class="screenshots" aria-labelledby="screens-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="label">App Preview</span>
+      <h2 id="screens-heading">Designed for clarity.</h2>
+      <p class="section-sub">Every screen is built around your current phase—nothing extra, nothing missing.</p>
+    </div>
+  </div>
+
+  <ul class="screens-grid" aria-label="App screenshots">
+    {screens.map((screen, i) => (
+      <li class={`screen-item fade-up fade-up-delay-${i + 1}`}>
+        <div class="screen-stage">
+          <img
+            src={screen.src}
+            alt={screen.alt}
+            width="1003"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="screen-meta">
+          <span class="screen-step" aria-hidden="true">{screen.label}</span>
+          <p class="screen-caption">{screen.caption}</p>
+        </div>
+      </li>
+    ))}
+  </ul>
+
+</section>
+
+<style>
+  .screenshots {
+    padding-block: var(--section-pad);
+    border-top: 1px solid var(--border);
+  }
+
+  .section-header {
+    margin-bottom: 64px;
+    max-width: var(--text-width);
+  }
+
+  .section-header h2 {
+    margin-top: 6px;
+    margin-bottom: 12px;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    max-width: 440px;
+  }
+
+  .screens-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    align-items: end;
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    box-sizing: border-box;
+  }
+
+  .screen-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .screen-stage {
+    overflow: visible;
+  }
+
+  .screen-stage img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    filter: drop-shadow(0 28px 60px rgba(0, 0, 0, 0.6));
+  }
+
+  .screen-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-inline: 4px;
+  }
+
+  .screen-step {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+
+  .screen-caption {
+    font-size: 0.875rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  @media (max-width: 700px) {
+    .screens-grid {
+      grid-template-columns: minmax(0, 360px);
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .screen-item:nth-child(2) .screen-stage {
+      transform: none;
+    }
+  }
+</style>
