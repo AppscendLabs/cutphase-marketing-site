@@ -1,0 +1,17 @@
+{
+  "name": "CutPhase",
+  "short_name": "CutPhase",
+  "description": "Phase-based dieting app for cutting, bulking, and maintenance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#D44035",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
