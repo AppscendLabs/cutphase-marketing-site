@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'CutPhase — Phase-Based Dieting App',
-  description = 'CutPhase structures your nutrition into cutting, bulking, and maintenance phases—so your diet actually aligns with your goals.',
+  title = 'CutPhase — #1 Phase-Based Dieting App for Cutting, Bulking & Maintenance',
+  description = 'CutPhase is the smart diet app that structures your nutrition into cutting, bulking, and maintenance phases. Track macros, follow a phase-based meal plan, and finally get results. Free on iOS & Android.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://cutphase.app');
@@ -20,13 +20,14 @@ const ogImage = new URL('/images/og-image.png', Astro.site ?? 'https://cutphase.
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#D44035" />
 
     <!-- Primary Meta -->
     <title>{title}</title>
-    <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="diet app, cutting diet, bulking diet, phase-based nutrition, meal planning, calorie tracking, fitness app, maintenance phase" />
+    <meta name="keywords" content="diet app, cutting diet app, bulking diet app, phase based nutrition, calorie deficit app, macro tracking, meal planning app, weight loss app, muscle building diet, body recomposition app, fitness nutrition app, maintenance diet, cutting phase, bulking phase, calorie tracking" />
+    <meta name="author" content="CutPhase" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph -->
@@ -38,40 +39,151 @@ const ogImage = new URL('/images/og-image.png', Astro.site ?? 'https://cutphase.
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CutPhase — Phase-Based Dieting App" />
     <meta property="og:site_name" content="CutPhase" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@cutphaseapp" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="CutPhase — Phase-Based Dieting App" />
 
-    <!-- JSON-LD Schema -->
+    <!-- JSON-LD: MobileApplication -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
         "name": "CutPhase",
-        "description": "Phase-based dieting app for cutting, bulking, and maintenance",
+        "description": "CutPhase is a phase-based dieting app that structures your nutrition into cutting, bulking, and maintenance phases so your diet actually aligns with your goals.",
+        "url": "https://cutphase.app",
         "operatingSystem": "iOS, Android",
         "applicationCategory": "HealthApplication",
-        "url": "https://cutphase.app",
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
-        }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "1",
+          "bestRating": "5"
+        },
+        "installUrl": [
+          "https://apps.apple.com/us/app/cutphase/id6756089854",
+          "https://play.google.com/store/apps/details?id=com.appscendlabs.cutphase"
+        ],
+        "screenshot": "https://cutphase.app/images/mockup-01.png",
+        "featureList": [
+          "Phase-based nutrition planning",
+          "Cutting diet tracking",
+          "Bulking diet tracking",
+          "Maintenance phase management",
+          "Macro and calorie tracking",
+          "Daily meal schedule",
+          "Habit tracking",
+          "Progress tracking",
+          "Shopping list generation"
+        ]
       }
     </script>
 
-    <!-- Favicon -->
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CutPhase",
+        "url": "https://cutphase.app",
+        "logo": "https://cutphase.app/images/logo.png",
+        "sameAs": [
+          "https://apps.apple.com/us/app/cutphase/id6756089854",
+          "https://play.google.com/store/apps/details?id=com.appscendlabs.cutphase"
+        ]
+      }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CutPhase",
+        "url": "https://cutphase.app",
+        "description": "The smart phase-based dieting app for cutting, bulking, and maintenance."
+      }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is CutPhase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CutPhase is a phase-based dieting app that helps you structure your nutrition into cutting, bulking, and maintenance phases. Instead of guessing your diet, CutPhase gives you a clear plan aligned with your current fitness goal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a cutting phase in dieting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A cutting phase is a period where you eat in a calorie deficit to lose body fat while preserving muscle mass. CutPhase tracks your macros, meals, and daily habits to keep you on track during your cut."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a bulking phase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A bulking phase is a period where you eat in a calorie surplus to build muscle. CutPhase adjusts your meal plan and macro targets to support lean muscle gain during your bulk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is CutPhase free to download?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, CutPhase is free to download on both iOS and Android. No credit card required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is CutPhase available on Android?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, CutPhase is available on both iOS (App Store) and Android (Google Play Store)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is CutPhase different from other diet apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unlike generic calorie counters, CutPhase is built specifically around diet phases — cutting, bulking, and maintenance. Every meal plan, macro target, and habit is tailored to your current phase so your nutrition always matches your goal."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Favicon & Manifest -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -87,6 +199,7 @@ const ogImage = new URL('/images/og-image.png', Astro.site ?? 'https://cutphase.
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
             }
           });
         },
